@@ -30,7 +30,7 @@ function addQueryToSheet(SpreadsheetId){
   sheet.copyTo(destination);
 }
 
-function cleanFormula(SpreadsheetId){
+function cleanFormula(SpreadsheetId){ // Instead of this formula, .getValue() method is also be valid. But for my project it is required to store data as value only
   var spreadsheet = SpreadsheetApp.openById(SpreadsheetId);
   var sheetNumber = spreadsheet.getNumSheets();
   var lastSheet = spreadsheet.getSheets()[sheetNumber-1];
